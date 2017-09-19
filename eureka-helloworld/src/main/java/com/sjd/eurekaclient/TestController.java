@@ -34,9 +34,9 @@ public class TestController {
     @RequestMapping("/helloworld")
     public String helloWorld () {
 
-        String hello = restTemplate.getForObject("http://EUREKA-HELLO/api/hello", String.class);
-        String world = restTemplate.getForObject("http://EUREKA-WORLD/api/world", String.class);
+        String hello = restTemplate.getForObject("http://EUREKA-HELLO:8080/api/hello", String.class);
+        String world = restTemplate.getForObject("http://EUREKA-WORLD:8081/api/world", String.class);
 
-        return "Response is : " + hello + " " + world;
+        return "Response (with ports) is : " + hello + " " + world;
     }
 }
