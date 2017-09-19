@@ -21,4 +21,10 @@ public class TestController {
             @PathVariable String applicationName) {
         return this.discoveryClient.getInstances(applicationName);
     }
+
+    @RequestMapping("/world")
+    public String world () {
+
+        return "World";
+    }
 }

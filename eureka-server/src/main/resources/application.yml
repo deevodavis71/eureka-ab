@@ -6,10 +6,10 @@ eureka:
   instance:
     hostname: peer1
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     serviceUrl:
-      defaultZone: http://peer2:8762
+      defaultZone: http://peer1:8761/eureka,http://peer2:8762/eureka
 
 ---
 spring:
@@ -18,7 +18,7 @@ eureka:
   instance:
     hostname: peer2
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     serviceUrl:
-      defaultZone: http://peer1:8761
+      defaultZone: http://peer1:8761/eureka,http://peer2:8762/eureka
