@@ -14,6 +14,5 @@ vi /etc/hosts
 Clients
 =======
 
-mvn spring-boot:run -Dserver.port=8080
+mvn spring-boot:run 
 
-mvn spring-boot:run -Dserver.port=8081
